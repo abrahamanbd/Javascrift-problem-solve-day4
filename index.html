@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>problem solve day-04</title>
+</head>
+<body>
+
+	<div class="calculator-box" style="text-align: center;">
+		<h1 style="text-transform: uppercase;color: red;">calculate multiplication and division of two numbers</h1>
+		<p>1st Number: <input type="number" id="one"></p>
+		<p>2nd Number: <input type="number" id="two"></p>
+		<br><br>
+		<button onclick="Multipli()">Multiplication</button>
+		<button onclick="divi()">Divition</button>
+		<p id="test">This Result Is:</p>
+	</div>
+
+	<script type="text/javascript">
+		function Multipli() {
+			var mul1=document.getElementById('one').value;
+			var mul2=document.getElementById('two').value;
+			var total=mul1*mul2;
+			document.getElementById('test').innerHTML=total;
+		}
+		function divi() {
+			var div1=document.getElementById('one').value;
+			var div2=document.getElementById('two').value;
+			var total=div1/div2;
+			document.getElementById('test').innerHTML=total;
+		}
+	</script>
+
+
+    <div class="text-reverse" style="text-align: center;">
+    	<h1 style="text-transform: uppercase;color: green;">JavaScript: Reverse a given string</h1>
+	    <P>Enter Any Word: <input type="text" id="first"></P>
+	    <button id="btn">Click Me!</button>
+	    <h1 id="tag">The reverse word will given below:</h1>
+	    <h2 id="result"></h2>
+    </div>
+
+	<script>
+	document.getElementById('btn').addEventListener('click', function(){
+	    var word= document.getElementById('first').value;
+	    var result= word.split("").reverse().join("");
+	    document.getElementById('result').innerHTML = result;
+	    document.getElementById('tag').innerHTML=('The reverse word of' +' ' +word);
+	    document.getElementById('result').style.color='red';
+	})
+	</script>
+	
+
+</body>
+</html>
